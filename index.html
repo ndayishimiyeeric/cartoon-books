@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cartoon Books</title>
+  </head>
+  <body>
+    <h1 class="page-title">Cartoon Books</h1>
+    <h6>Hello, my name is Eric</h6>
+    <div class="books-wrapper">
+      <div class="books">
+        <h3>List of Books</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ID</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+      </div>
+      <form id="book-form">
+        <h3>Add book here</h3>
+        <input type="text" id="title" placeholder="enter book title" required />
+        <input type="text" id="author" placeholder="enter author" required />
+        <input
+          type="number"
+          id="id-number"
+          placeholder="enter book id"
+          required
+        />
+        <button id="add-btn" class="add-btn">Add</button>
+      </form>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
