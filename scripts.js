@@ -1,20 +1,18 @@
-// Book class : Representing a Book
-class Book {
+class Book { //eslint-disable-line
   constructor(title, author, id) {
     this.title = title;
     this.author = author;
-      this.id = id;
+    this.id = id;
   }
 }
 
-// UI class : to handle ui tasks
 class UI { //eslint-disable-line
   static displayBooks() {
-    const books = Store.getBooks();
+    const books = Store.getBooks(); //eslint-disable-line
     books.forEach((book) => UI.addBookToList(book));
   }
 
-   static addBookToList(book) {
+  static addBookToList(book) {
     const list = document.querySelector('#book-list');
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -26,17 +24,17 @@ class UI { //eslint-disable-line
     list.appendChild(row);
    }
 
-   static deleteBook(ele) {
+  static deleteBook(ele) {
     if (ele.classList.contains('delete')) {
       ele.parentElement.parentElement.remove();
     }
-   }
+  }
 
-   static clearInputs() {
+  static clearInputs() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
     document.querySelector('#id-number').value = '';
-   }
+  }
 }
 
 // Store class : to store books
@@ -46,25 +44,25 @@ class Store { //eslint-disable-line
     if (localStorage.getItem('books') === null) {
       books = [];
     } else {
-        books = JSON.parse(localStorage.getItem('books'));
+      books = JSON.parse(localStorage.getItem('books'));
       }
       return books;
       }
 
-   static addBook(book) {
+  static addBook(book) {
     const books = Store.getBooks();    
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
-   }
+  }
 
-   static removeBook(id) {
+  static removeBook(id) {
     const books = Store.getBooks();
     books.forEach((book, index) => {
       if (book.id === id) {
         books.splice(index, 1);
-       }
+      }
     });
-     localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books));
    }
 }
 
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 // Event : to Add a book
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   // Prevent default
-   e.preventDefault();
+  e.preventDefault();
 
   // Get values form input
   const title = document.querySelector('#title').value;
@@ -96,6 +94,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 // Event : to remove a book
 document.querySelector('#book-list').addEventListener('click', (e) => {
-    UI.deleteBook(e.target);
-    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  UI.deleteBook(e.target);
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
