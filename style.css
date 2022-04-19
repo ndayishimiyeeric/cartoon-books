@@ -182,7 +182,7 @@ h6::after {
   width: 0.125em;
   background: black;
   animation: typewritting 4s steps(23) 2s forwards,
-             blink 750ms steps(23) infinite;
+    blink 750ms steps(23) infinite;
 }
 
 @keyframes typewritting {
