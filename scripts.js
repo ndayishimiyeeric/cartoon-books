@@ -22,7 +22,7 @@ class UI { //eslint-disable-line
     <td><a href="#"class="btn-danger delete">X</a></td>
     `;
     list.appendChild(row);
-   }
+  }
 
   static deleteBook(ele) {
     if (ele.classList.contains('delete')) {
@@ -45,12 +45,12 @@ class Store { //eslint-disable-line
       books = [];
     } else {
       books = JSON.parse(localStorage.getItem('books'));
-      }
-      return books;
-      }
+    }
+    return books;
+  }
 
   static addBook(book) {
-    const books = Store.getBooks();    
+    const books = Store.getBooks(); //eslint-disable-line
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
@@ -63,7 +63,7 @@ class Store { //eslint-disable-line
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
-   }
+  }
 }
 
 // Event : to display books
