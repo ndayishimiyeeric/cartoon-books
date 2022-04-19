@@ -181,9 +181,8 @@ h6::before {
 h6::after {
   width: 0.125em;
   background: black;
-  animation: 
-    typewritting 4s steps(23) 2s forwards,
-    blink 750ms steps(23) infinite;
+  animation: typewritting 4s steps(23) 2s forwards, /* stylelint-disable-line */
+             blink 750ms steps(23) infinite; /* stylelint-disable-line */
 }
 
 @keyframes typewritting {
