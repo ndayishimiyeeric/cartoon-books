@@ -1,6 +1,6 @@
 # cartoon-books
 
-This a small project for HTML & CSS and Javascript from the microverse curriculum with a few changes in styles.
+This a small project for HTML & CSS and Javascript from the microverse curriculum.
 
 This project is meant to test my ability's on Javascript classes and implementation of storing data into Local storage.
 
@@ -12,7 +12,7 @@ This project is meant to test my ability's on Javascript classes and implementat
 
 ## Live Demo
 
-[Live Demo Link](https://ndayishimiyeeric.github.io/first-capstone-summit/)
+[Live Demo Link](https://ndayishimiyeeric.github.io/cartoon-books/)
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ To get a local copy up and running:
 
 1. Clone this repository or download the Zip folder:
 
-**`git clone https://github.com/ndayishimiyeeric/first-capstone-summit.git`**
+**`git clone git@github.com:ndayishimiyeeric/cartoon-books.git`**
 
 2. Navigate to the location of the folder in your machine:
 
