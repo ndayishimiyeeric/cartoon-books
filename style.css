@@ -8,7 +8,6 @@
 }
 
 body {
-  margin: auto;
   font-family: 'Square Peg', cursive;
   font-size: 30px;
   background: url(./img/wallpaper.jpg);
@@ -17,10 +16,45 @@ body {
   min-height: 100vh;
 }
 
-.page-title {
+ul {
+  list-style: none;
+}
+
+.navigations a {
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(to left, #3e5151,#decba4);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 2px 5px;
   text-align: center;
-  margin: 20px 0 20px 0;
-  font-size: 60px;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+}
+
+header {
+  padding: 1% 10%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigations {
+  width: 40%;
+  display: flex;
+  gap: 20%;
+}
+
+.navigations li {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.page-title {
+  font-size: 45px;
   background: url(./img/tom3.jpg);
   background-size: contain;
   -webkit-background-clip: text;
@@ -29,10 +63,8 @@ body {
 
 h6 {
   width: max-content;
-  text-align: center;
   font-size: 10px;
   position: relative;
-  margin: auto;
   font-family: 'Source Code Pro', monospace;
 }
 
@@ -44,16 +76,24 @@ h6 {
 
 .books {
   width: 30%;
+  display: none;
+  margin-top: 4%;
 }
 
 form h3 {
   margin-bottom: 20px;
   text-align: center;
+  background: linear-gradient(to left, #3e5151, #decba4);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .books h3 {
   margin-bottom: 20px;
   text-align: center;
+  background: linear-gradient(to left, #3e5151, #decba4);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 table {
@@ -81,10 +121,15 @@ tbody tr td {
   margin-bottom: 20px;
 }
 
+.add-form {
+  display: none;
+}
+
 form {
   width: 30%;
   display: flex;
   flex-direction: column;
+  margin-top: 7%;
 }
 
 form input {
@@ -128,7 +173,60 @@ input:focus {
   font-size: 25px;
 }
 
+.enabled {
+  display: block;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 10% 5% 10%;
+  gap: 30px;
+  margin-top: 4%;
+}
+
+.about h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(to left, #3e5151, #decba4);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.disabled {
+  display: none;
+}
+
+.about .description {
+  text-align: center;
+  width: 60%;
+}
+
+.about .contactus {
+  text-align: center;
+}
+
+.us {
+  display: flex;
+  gap: 60px;
+}
+
 @media only screen and (max-width: 768px) {
+  header {
+    padding: 1% 8%;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .navigations {
+    width: 100%;
+    gap: 30%; 
+    margin-top: 10%;
+  }
+
   .books-wrapper {
     flex-direction: column-reverse;
     margin: auto;
@@ -155,9 +253,17 @@ input:focus {
   form input {
     width: 100%;
   }
+  .about {
+    padding: 0;
+    margin-top: 0;
+  }
 }
 
 @media only screen and (max-width: 476px) {
+  .navigations {
+    width: 80%;
+    gap: 10%;
+  }
   table {
     transform: scaleX(0.65);
   }

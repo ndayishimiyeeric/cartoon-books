@@ -97,3 +97,30 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
+
+// Navigation
+const navList = document.querySelector('#nav-list');
+const navAdd = document.querySelector('#nav-add');
+const navAbout = document.querySelector('#nav-about');
+
+const booksDiv = document.querySelector('.books');
+const addForm = document.querySelector('.add-form');
+const aboutSection = document.querySelector('.about');
+
+navList.addEventListener('click', () => { 
+  addForm.classList.remove('enabled');
+  booksDiv.classList.add('enabled');
+  aboutSection.classList.add('disabled');
+});
+
+navAdd.addEventListener('click', () => { 
+  addForm.classList.add('enabled');
+  booksDiv.classList.remove('enabled');
+  aboutSection.classList.add('disabled');
+});
+
+navAbout.addEventListener('click', () => { 
+  addForm.classList.remove('enabled');
+  booksDiv.classList.remove('enabled');
+  aboutSection.classList.remove('disabled');
+});

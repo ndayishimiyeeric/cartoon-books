@@ -9,8 +9,19 @@
     <title>Cartoon Books</title>
   </head>
   <body>
-    <h1 class="page-title">Cartoon Books</h1>
-    <h6>Hello, my name is Eric</h6>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <h1 class="page-title">Cartoon Books</h1>
+          <h6>Hello, my name is Eric</h6>
+        </div>
+        <ul class="navigations">
+          <li><a href="#" id="nav-add">Add</a></li>
+          <li><a href="#" id="nav-list">List</a></li>
+          <li><a href="#" id="nav-about">About</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="books-wrapper">
       <div class="books">
         <h3>List of Books</h3>
@@ -26,7 +37,7 @@
           <tbody id="book-list"></tbody>
         </table>
       </div>
-      <form id="book-form">
+      <form id="book-form" class="add-form enabled">
         <h3>Add book here</h3>
         <input type="text" id="title" placeholder="enter book title" required />
         <input type="text" id="author" placeholder="enter author" required />
@@ -39,6 +50,31 @@
         <button id="add-btn" class="add-btn">Add</button>
       </form>
     </div>
+
+    <section class="about disabled">
+      <div class="description">
+        <h3>Short Description</h3>
+        <p>
+          This project is from the microverse curriculum. It is a library where
+          you can Add book, remove book and display list of books.
+        </p>
+      </div>
+      <div class="contactus">
+        <h3>Contact Us</h3>
+        <div class="us">
+          <ul class="me">
+            <li>LinkedIN</li>
+            <li>Twitter</li>
+            <li>Github</li>
+          </ul>
+          <ul class="her">
+            <li>LinkedIN</li>
+            <li>Twitter</li>
+            <li>Github</li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <script src="scripts.js"></script>
   </body>
 </html>
