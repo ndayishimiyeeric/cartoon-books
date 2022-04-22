@@ -23,7 +23,7 @@ ul {
 .navigations a {
   text-decoration: none;
   cursor: pointer;
-  background: linear-gradient(to left, #3e5151,#decba4);
+  background: linear-gradient(to left, #3e5151, #decba4);
   -webkit-background-clip: text;
   color: transparent;
   padding: 2px 5px;
@@ -232,7 +232,7 @@ input:focus {
 
   .navigations {
     width: 100%;
-    gap: 30%; 
+    gap: 30%;
     margin-top: 10%;
   }
 
@@ -262,6 +262,7 @@ input:focus {
   form input {
     width: 100%;
   }
+
   .about {
     padding: 0;
     margin-top: 0;
@@ -273,6 +274,7 @@ input:focus {
     width: 80%;
     gap: 10%;
   }
+
   table {
     transform: scaleX(0.65);
   }

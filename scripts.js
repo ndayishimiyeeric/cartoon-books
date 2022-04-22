@@ -87,8 +87,8 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   UI.addBookToList(book);
   smallMessage.innerHTML = 'Your Book Added successfully';
   setTimeout(() => {
-  smallMessage.innerHTML = '';
-  },3000)
+    smallMessage.innerHTML = '';
+  }, 3000);
 
   // Add book to Store
   Store.addBook(book);
@@ -112,19 +112,19 @@ const booksDiv = document.querySelector('.books');
 const addForm = document.querySelector('.add-form');
 const aboutSection = document.querySelector('.about');
 
-navList.addEventListener('click', () => { 
+navList.addEventListener('click', () => {
   addForm.classList.remove('enabled');
   booksDiv.classList.add('enabled');
   aboutSection.classList.add('disabled');
 });
 
-navAdd.addEventListener('click', () => { 
+navAdd.addEventListener('click', () => {
   addForm.classList.add('enabled');
   booksDiv.classList.remove('enabled');
   aboutSection.classList.add('disabled');
 });
 
-navAbout.addEventListener('click', () => { 
+navAbout.addEventListener('click', () => {
   addForm.classList.remove('enabled');
   booksDiv.classList.remove('enabled');
   aboutSection.classList.remove('disabled');
