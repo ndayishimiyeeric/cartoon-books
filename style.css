@@ -207,9 +207,18 @@ input:focus {
   text-align: center;
 }
 
-.us {
+.me {
   display: flex;
-  gap: 60px;
+  gap: 30px;
+}
+
+#success {
+  display: block;
+  font-size: 24px;
+  background: linear-gradient(to right, #f12711, #f5af19);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {

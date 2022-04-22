@@ -78,12 +78,17 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const idNumber = document.querySelector('#id-number').value;
+  const smallMessage = document.querySelector('#success');
 
   // Create a new book
   const book = new Book(title, author, idNumber);
 
   // Add book to UI
   UI.addBookToList(book);
+  smallMessage.innerHTML = 'Your Book Added successfully';
+  setTimeout(() => {
+  smallMessage.innerHTML = '';
+  },3000)
 
   // Add book to Store
   Store.addBook(book);
