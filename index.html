@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/tomandjerry.jpeg" />
+    <title>Cartoon Books</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <h1 class="page-title">Cartoon Books</h1>
+          <h6>Hello, my name is Eric</h6>
+        </div>
+        <ul class="navigations">
+          <li><a href="#" id="nav-add">Add</a></li>
+          <li><a href="#" id="nav-list">List</a></li>
+          <li><a href="#" id="nav-about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="books-wrapper">
+      <div class="books">
+        <h3>List of Books</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>version</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+      </div>
+      <form id="book-form" class="add-form enabled">
+        <h3>Add book here</h3>
+        <input type="text" id="title" placeholder="enter book title" required />
+        <input type="text" id="author" placeholder="enter author" required />
+        <input
+          type="number"
+          id="id-number"
+          placeholder="enter book version"
+          required
+        />
+        <button type="submit" id="add-btn" class="add-btn">Add</button>
+        <small id="success"></small>
+      </form>
+    </div>
+
+    <section class="about disabled">
+      <div class="description">
+        <h3>Short Description</h3>
+        <p>
+          This project is from the microverse curriculum. It is a library where
+          you can Add book, remove book and display list of books.
+        </p>
+      </div>
+      <div class="contactus">
+        <h3>Contact Me</h3>
+        <ul class="me">
+          <li>
+            <a href="https://twitter.com/odaltongain"
+              ><img src="./img/twitter.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nderic/"
+              ><img src="./img/Linkedinicon.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/ndayishimiyeeric"
+              ><img src="./img/github.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="scripts.js"></script>
+  </body>
+</html>
